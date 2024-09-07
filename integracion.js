@@ -1,6 +1,7 @@
 let materias =[
     
 ]
+let profesores=[];
 mostrarPaginaMaterias=function(){
 
     mostrarComponente("divMaterias");
@@ -75,12 +76,13 @@ refrescarMaterias=function(){
 
 
 buscarMateria=function(identificador){
-    identificador=recuperarTexto("txtBuscar")    
+    identificador=recuperarTexto("txtCodigo")    
     for (let i=0;i<materias.length;i++){
         resultado=materias[i];
         let codigo=resultado.codigo
         if(identificador==codigo){              
             alert("MATERIA ENCONTRADA")
+            refrescarMaterias()
             break}
 
         else{
@@ -89,6 +91,80 @@ buscarMateria=function(identificador){
     }
 }
 
+<<<<<<< HEAD
+crearProfesor=function(){
+    let nombre=recuperarTexto("txtNombre")
+    let edad=recuperarInt("txtEdad");
+    let email=recuperarTexto("txtEmail")
+    let profesor={};
+    profesor.nombre=nombre;
+    profesor.edad=edad;
+    profesor.gmail=email;
+    return profesor;
+}
+agregarProfesor=function(){
+    let profesor=crearProfesor();
+    profesores.push(profesor);
+    console.log(profesores);
+}
+refrescarProfesor=function(){
+    let cmpTabla=document.getElementById("lblTabla");
+    let contenido="<table id=\"Tabla\"><tr>"+
+    "<th>NOMBRE</th>"+
+    "<th>EDAD</th>"+
+    "<th>GMAIL</th>"+
+    "</tr>"
+    let elemento;
+    for(let i=0;i<profesores.length;i++){
+        elemento=profesores[i];
+        if(elemento!= undefined){
+            contenido+=
+            "<tr><td>"+elemento.nombre+"</td>"+
+            "<td>"+elemento.edad+"</td>"+
+            "<td>"+elemento.gmail+"</td>"+
+            "</tr>"
+        }
+    }
+    contenido+="</table>"
+    cmpTabla.innerHTML=contenido;
+}
+
+buscarProfesor=function(nombre){
+    let elemento;
+    let encontrado=false
+    for(let i=0;i<profesores.length;i++){
+        elemento=profesores[i];
+        if(elemento.nombre+elemento.edad==nombre){
+                alert("PROFESOR ENCONTRADO")
+                encontrado=true; 
+
+        }
+    }
+    if(encontrado==false){
+        alert("PROFESOR NO ENCONTRADO");
+    }
+}
+ejecutarProfesor=function(){
+    let nombre=recuperarTexto("txtBuscar")
+    buscarProfesor(nombre);
+    mostrarTextoEnCaja("txtNombre","")
+    mostrarTextoEnCaja("txtEdad","");
+    mostrarTextoEnCaja("txtEmail","")
+}
+eliminarProfesores=function(){
+    let nombre=recuperarTexto("txtBuscar")
+    for(let i=0;i<profesores.length;i++){
+        let elemento=profesores[i];
+        if(elemento.nombre+elemento.edad ==nombre){
+         delete profesores[i];
+         alert ("PROFESOR ELIMINADO")
+        }
+    }
+    refrescarProfesor();
+    
+}
+
+=======
 
 let estudiantes = [];
 
@@ -151,6 +227,7 @@ buscarEstudante = function(){
     }
 }
 
+<<<<<<< HEAD
 
 
 //---------------------------------------------------------------------------------------------------------------
@@ -248,3 +325,27 @@ function eliminarAula() {
 
 
 
+=======
+eliminarMateria=function(){
+    let CODIGO
+    let codigo=recuperarTexto("txtCodigoBorrar")
+
+        for (let i=0;i<materias.length;i++){
+            resultado=materias[i];
+            let objetoaEliminar=resultado.codigo
+            if(codigo==objetoaEliminar){              
+                alert("MATERIA ELIMINADA")
+                resultado.shift();
+                resultado=resultado.filter(function(i){return 1!=resultado})
+                refrescarMaterias()
+                break}
+            else{
+                alert("MATERIA NO ENCONTRADA")
+            }
+        }
+        var arreglo = [1,2,3,4,5];
+
+
+}
+>>>>>>> e62f7660b1d9a8cc1ec86325f603c273366af80f
+>>>>>>> 65ecb624c17860e0a4c6657f9698ddb1e7439672

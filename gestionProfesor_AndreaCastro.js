@@ -56,3 +56,14 @@ ejecutarProfesor=function(){
     mostrarTextoEnCaja("txtEdad","");
     mostrarTextoEnCaja("txtEmail","")
 }
+eliminarProfesores=function(){
+    let nombre=recuperarTexto("txtBuscar")
+    for(let i=0;i<profesores.length;i++){
+        let elemento=profesores[i];
+        if(elemento.nombre+elemento.edad ==nombre){
+         delete elemento[i];
+        }
+    }
+    console.log(profesores);
+    refrescarProfesor();
+}
