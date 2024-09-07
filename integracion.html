@@ -121,24 +121,34 @@
         <div class="contenido" id="divGestionProfesores">
           
             <div class="inferior">
-                <div class="titulo">PROFESORES</div>
-                <div class="contenedorTexto">
-                    <div class="etiquetaTexto">NOMBRE PROFESOR</div>
-                    <div class="cajaTexto">
-                        <input type="text" class="caja" id="txtNumeroCuenta3"/>
-                </div>
-                <div class="contenedorTexto">
-                    <div class="etiquetaTexto">EDAD</div>
-                    <div class="cajaTexto">
-                        <input type="text" class="caja" id="txtNumeroCuenta3"/>
-                </div>
+                <div class="contenedor">
+                    <div class="cajas">
+                        <h2>Nombre </h2>
+                        <input type="text" id="txtNombre"/></div>
+                    </div>
+                    <div class="cajas">
+                        <h2>Edad</h2>
+                        <input type="text" id="txtEdad"/>
+                    </div>
+                    <div class="cajas">
+                        <h2>gmail</h2>
+                        <input type="text" id="txtEmail">
+                    </div>
+                    <div class="cajas">
+                        <h3>Identidicador</h3>
+                        <input type="text" id="txtBuscar">
+                    <div >
                     
                 </div>
                 <div class="contenedorAcciones">
-                    <input type="button" value="BUSCAR" onclick="ejecutar();"/>                    
+                    <input type="button" value="Buscar" onclick="ejecutarProfesor();" class="botones">
+                    <input type="button" value="Guardar" onclick="agregarProfesor();" class="botones">
+                    <input type="button" value="Refrescar" onclick="refrescarProfesor();" class="botones">
+                    <input type="button" value="Eliminar" onclick="eliminarProfesores();" class="botones">                   
                 </div>
-                <div id="tablaMovimientos">
-                    TABLA
+            
+                <div id="lblTabla" class="Tabla">
+                    
                 </div>
             </div>
 
