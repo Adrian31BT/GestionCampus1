@@ -17,8 +17,8 @@
             <div class="contenedorBotones">
                 <input type="button" value="MATERIAS" class="boton"  onclick="mostrarPaginaMaterias();"/>
                 <input type="button" value="PROFESORES" class="boton" onclick="mostrarPaginaProfesores();" />
-                <input type="button" value="ALUMNOS" class="boton" onclick="mostrarPaginaAulas();"/>
-                <input type="button" value="AULAS" class="boton" onclick="mostrarPaginaEstudiantes();"/>
+                <input type="button" value="ALUMNOS" class="boton" onclick="mostrarPaginaEstudiantes();"/>
+                <input type="button" value="AULAS" class="boton" onclick="mostrarPaginaAulas();"/>
             </div>
             <div class="contenedorInfoGrupo">
                 <div>INTEGRANTE 3</div>
@@ -75,84 +75,51 @@
 
         </div>
         <div class="contenido" id="divGestionEstudiante">
-            <div class="superior">
-                <div class="titulo">TRANSACCIONES</div>
+            <div class="superior"></div>
+                <div class="titulo">ESTUDIANTES</div>
                 <div class="contenedorTexto">
-                    <div class="etiquetaTexto">NUMERO CUENTA</div>
+                    <div class="etiquetaTexto">ID</div>
+                    <div class="cajaTexto" >
+                        <input type="text" class="caja" id="txtIdEstudiante"/>
+                    </div>
+                </div>
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">NOMBRE</div>
                     <div class="cajaTexto">
-                        <input type="text" class="caja" id="txtNumeroCuenta2"/>
+                        <input type="text" class="caja" id="txtNombre"/>
+                    </div>
+                </div>
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">CURSO</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="txtCurso"/>
+                    </div>
+                </div>
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">MATRICULA</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="txtMatricula"/>
+                    </div>
+                </div>
+                <div class="contenedorTexto"></div>
+                    <div class="etiquetaTexto">BUSCAR ID ESTUDIANTE</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="txtBuscar"/>
                     </div>
                 </div>
                 <div class="contenedorAcciones">
-                    <input type="button" value="BUSCAR" onclick="ejecutarBusquedaTransaccion();"/>
-                </div>
-                <div class="contenedorTexto">
-                    <div class="etiquetaTexto">MONTO</div>
-                    <div class="cajaTexto">
-                        <input type="text" class="caja" id="txtMonto"/>
-                    </div>
-                </div>
-                <div class="contenedorAcciones">
-                    <input type="button" value="DEPOSITAR" id="btnDepositar" onclick="ejecutarDeposito();"/>
-                    <input type="button" value="RETIRAR" id="btnRetirar" onclick="ejecutarRetiro();"/>
-                    
-                </div>
-                <div class="contenedorAcciones">
-                <div class="etiquetaTexto">DATOS CUENTA>>></div>
-                <p  class="etiquetaTexto" id="datosCuentaNumero"></p>
-                <p class="etiquetaTexto" id="datosCuentaNombre"></p>
-                <p  class="etiquetaTexto" id="datosCuentaSaldo"></p>
-
-            </div>
-              
-            </div>
-        </div>
-        <div class="contenido" id="divGestionAulas">
-          
-            <div class="inferior">
-                <div class="titulo">MOVIMIENTOS</div>
-                <div class="contenedorTexto">
-                    <div class="etiquetaTexto">NUMERO DE CUENTA</div>
-                    <div class="cajaTexto">
-                        <input type="text" class="caja" id="txtNumeroCuenta3"/>
-                    </div>
-                </div>
-                <div class="contenedorAcciones">
-                    <input type="button" value="BUSCAR" onclick="ejecutar();"/>                    
-                </div>
-                <div id="tablaMovimientos">
-                    TABLA
+                    <input type="button" value="GUARDAR" onclick="agregarEstudiante()"/>
+                    <input type="button" value="REFRESCAR" onclick="refrescarEstudiante()"/>
+                    <input type="button" value="BUSCAR" onclick="buscarEstudante();"/>
+                    <input type="button" value="ELIMINAR" onclick="eliminarEstudante();"/>
                 </div>
             </div>
 
-        </div>
-        <div class="contenido" id="divGestionProfesores">
-          
-            <div class="inferior">
-                <div class="titulo">PROFESORES</div>
-                <div class="contenedorTexto">
-                    <div class="etiquetaTexto">NOMBRE PROFESOR</div>
-                    <div class="cajaTexto">
-                        <input type="text" class="caja" id="txtNumeroCuenta3"/>
-                </div>
-                <div class="contenedorTexto">
-                    <div class="etiquetaTexto">EDAD</div>
-                    <div class="cajaTexto">
-                        <input type="text" class="caja" id="txtNumeroCuenta3"/>
-                </div>
-                    
-                </div>
-                <div class="contenedorAcciones">
-                    <input type="button" value="BUSCAR" onclick="ejecutar();"/>                    
-                </div>
-                <div id="tablaMovimientos">
-                    TABLA
-                </div>
+            <div class="inferior" id="tablaEstudiantes">
+                TABLA
             </div>
-
         </div>
 
-        </div>
     </div>
 </body>
 
