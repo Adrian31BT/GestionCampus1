@@ -8,7 +8,7 @@
 
 </head>
 
-<body onload="mostrarPaginaMaterias(), refrescarMaterias();">
+<body onload="mostrarPaginaMaterias(), refrescarMaterias();mostrarTabla()">
     <div class="principal">
         <div class="menu">
             <div class="contenedorLogo">
@@ -60,7 +60,8 @@
 
                 </div>
             </div>
-
+       
+    
             <div class="inferior" id="tblMaterias">
                 TABLA
             </div>
@@ -68,51 +69,52 @@
         </div>
         <div class="contenido" id="divGestionEstudiante">
             <div class="superior"></div>
-                <div class="titulo">ESTUDIANTES</div>
+                
                 <div class="contenedorTexto">
-                    <div class="etiquetaTexto">ID</div>
-                    <div class="cajaTexto" >
-                        <input type="text" class="caja" id="txtIdEstudiante"/>
+                    <div class="etiquetaTexto">Materia</div>
+              <div id="lblaula"></div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="txtNumeroAulas"/>
                     </div>
                 </div>
                 <div class="contenedorTexto">
-                    <div class="etiquetaTexto">NOMBRE</div>
+                    <div class="etiquetaTexto">HORARIO</div>
                     <div class="cajaTexto">
-                        <input type="text" class="caja" id="txtNombre"/>
+                        <div id="lblhorario"></div>
+                        <input type="text" class="caja" id="txtHorario"/>
                     </div>
                 </div>
                 <div class="contenedorTexto">
-                    <div class="etiquetaTexto">CURSO</div>
+                    <div class="etiquetaTexto">CAPACIDAD</div>
                     <div class="cajaTexto">
-                        <input type="text" class="caja" id="txtCurso"/>
-                    </div>
-                </div>
-                <div class="contenedorTexto">
-                    <div class="etiquetaTexto">MATRICULA</div>
-                    <div class="cajaTexto">
-                        <input type="text" class="caja" id="txtMatricula"/>
+                        <div id="lblcapacidad"></div>
+                        <input type="text" class="caja" id="txtCapacidadMáxima"/>
                     </div>
                 </div>
                 <div class="contenedorTexto"></div>
-                    <div class="etiquetaTexto">BUSCAR ID ESTUDIANTE</div>
+                    <div class="etiquetaTexto">ELIMINAR</div>
                     <div class="cajaTexto">
-                        <input type="text" class="caja" id="txtBuscar"/>
+                        <input type="text" class="caja" id="txtEliminar"/>
+                        <label for="txtEliminar">Eliminar Aula (por Materia o Horario):</label>
                     </div>
                 </div>
                 <div class="contenedorAcciones">
-                    <input type="button" value="GUARDAR" onclick="agregarEstudiante()"/>
-                    <input type="button" value="REFRESCAR" onclick="refrescarEstudiante()"/>
-                    <input type="button" value="BUSCAR" onclick="buscarEstudante();"/>
-                    <input type="button" value="ELIMINAR" onclick="eliminarEstudante();"/>
+                    <input type="button" value="GUARDAR" onclick="determinarAula()"/>
+                    <input type="button" value="BUSCAR" onclick="crearAula();"/>
+                    <input type="button" value="ELIMINAR" onclick="eliminarAula();"/>
                 </div>
             </div>
 
-            <div class="inferior" id="tablaEstudiantes">
+            <div class="inferior" id="tabla">
                 TABLA
             </div>
         </div>
 
     </div>
+
+   
+           
+    
 </body>
 
 </html>

@@ -9,14 +9,11 @@ let aula=recuperarTexto("txtNumeroAulas")
 let aula1=recuperarTexto("txtHorario")
 let aula2=recuperarTexto("txtCapacidadMáxima")
 
- mostraraTexto("lblaula","")
- mostraraTexto("lblhorario","")
-
- mostraraTexto("lblcapacidad","")
+ 
 
 if(aula.length<3){
   mostraraTexto("lblaula","minnimo 3 letras")
-  return
+  
 }else
 if(aula1.length<3){
   mostraraTexto("lblhorario","MINIMO 3 LETRS")
@@ -45,6 +42,7 @@ function mostrarTabla(){
  }
  tabla2+="</table>"
  tabla1.innerHTML=tabla2
+ 
 }
 
 
@@ -67,6 +65,27 @@ function determinarAula(){
     alert("aula encontrada")
     alert("MATERIA:"+encontrarAula.materia+"\nCAPACIDAD:"+encontrarAula.capacidad)
 }
+
+
+
+
+
+function eliminarAula() {
+    let idAula = recuperarTexto("txtEliminar");
+    if (!idAula) {
+        alert("Por favor, ingrese el identificador del aula a eliminar.");
+        return;
+    }
+    let indiceAula = aulas.findIndex(aula => aula.materia === idAula || aula.horario === idAula);
+    if (indiceAula !== -1) {
+        aulas.splice(indiceAula, 1);
+        console.log("Aula eliminada:", idAula);
+    } else {
+        alert("Aula no encontrada.");
+    }
+    mostrarTabla();
+}
+
 
 
 
