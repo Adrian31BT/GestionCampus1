@@ -78,12 +78,13 @@ refrescarMaterias=function(){
 
 
 buscarMateria=function(identificador){
-    identificador=recuperarTexto("txtBuscar")    
+    identificador=recuperarTexto("txtCodigo")    
     for (let i=0;i<materias.length;i++){
         resultado=materias[i];
         let codigo=resultado.codigo
         if(identificador==codigo){              
             alert("MATERIA ENCONTRADA")
+            refrescarMaterias()
             break}
 
         else{
@@ -94,3 +95,24 @@ buscarMateria=function(identificador){
 
 }
 
+eliminarMateria=function(){
+    let CODIGO
+    let codigo=recuperarTexto("txtCodigoBorrar")
+
+        for (let i=0;i<materias.length;i++){
+            resultado=materias[i];
+            let objetoaEliminar=resultado.codigo
+            if(codigo==objetoaEliminar){              
+                alert("MATERIA ELIMINADA")
+                resultado.shift();
+                resultado=resultado.filter(function(i){return 1!=resultado})
+                refrescarMaterias()
+                break}
+            else{
+                alert("MATERIA NO ENCONTRADA")
+            }
+        }
+        var arreglo = [1,2,3,4,5];
+
+
+}
