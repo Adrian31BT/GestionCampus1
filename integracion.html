@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="estilos.css" rel="stylesheet" />
+    <script src="integracion.js"></script>
+    <script src="utilitarios.js"></script>
+
+</head>
+
+<body onload="mostrarPaginaMaterias(), refrescarMaterias();">
+    <div class="principal">
+        <div class="menu">
+            <div class="contenedorLogo">
+                <img src="./imagenes/logoKrakeDev.png" width="80%" />
+            </div>
+            <div class="contenedorBotones">
+                <input type="button" value="CUENTAS" class="boton"  onclick="cargarPaginaCuentas();"/>
+                <input type="button" value="TRANSACCIONES" class="boton" onclick="cargarPaginaTRansacciones();" />
+                <input type="button" value="MOVIMIENTOS" class="boton" onclick="cargarPaginaMoviemientos();"/>
+            </div>
+            <div class="contenedorInfoGrupo">
+                <div>INTEGRANTE 3</div>
+                <div>INTEGRANTE 2</div>
+                <div>INTEGRANTE 1</div>
+            </div>
+        </div>
+        <div class="contenido" id="divMaterias">
+            <div class="superior">
+                <div class="titulo">MATERIAS</div>
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">NOMBRE DE MATERIA</div>
+                    <div class="cajaTexto" >
+                        <input type="text" class="caja" id="txtNombreMaterias"/>
+                    </div>
+                </div>
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">CODIGO</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="txtCodigo"/>
+                    </div>
+                </div>
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">DESCRIPCION</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="txtDescripcion"/>
+                    </div>
+                </div>
+                <div class="contenedorAcciones">
+                    <input type="button" value="GUARDAR" onclick="agregarMateria();"/>
+                    <input type="button" value="REFRESCAR" onclick="refrescarMaterias()"/>
+                    <input type="button" value="BUSCAR" onclick="buscarMateria()"/>
+                </div>
+            </div>
+
+            <div class="inferior" id="tblMaterias">
+                TABLA
+            </div>
+
+        </div>
+        <div class="contenido" id="divGestionEstudiante">
+            <div class="superior">
+                <div class="titulo">TRANSACCIONES</div>
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">NUMERO CUENTA</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="txtNumeroCuenta2"/>
+                    </div>
+                </div>
+                <div class="contenedorAcciones">
+                    <input type="button" value="BUSCAR" onclick="ejecutarBusquedaTransaccion();"/>
+                </div>
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">MONTO</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="txtMonto"/>
+                    </div>
+                </div>
+                <div class="contenedorAcciones">
+                    <input type="button" value="DEPOSITAR" id="btnDepositar" onclick="ejecutarDeposito();"/>
+                    <input type="button" value="RETIRAR" id="btnRetirar" onclick="ejecutarRetiro();"/>
+                    
+                </div>
+                <div class="contenedorAcciones">
+                <div class="etiquetaTexto">DATOS CUENTA>>></div>
+                <p  class="etiquetaTexto" id="datosCuentaNumero"></p>
+                <p class="etiquetaTexto" id="datosCuentaNombre"></p>
+                <p  class="etiquetaTexto" id="datosCuentaSaldo"></p>
+
+            </div>
+              
+            </div>
+        </div>
+        <div class="contenido" id="divGestionAulas">
+          
+            <div class="inferior">
+                <div class="titulo">MOVIMIENTOS</div>
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">NUMERO DE CUENTA</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="txtNumeroCuenta3"/>
+                    </div>
+                </div>
+                <div class="contenedorAcciones">
+                    <input type="button" value="BUSCAR" onclick="ejecutar();"/>                    
+                </div>
+                <div id="tablaMovimientos">
+                    TABLA
+                </div>
+            </div>
+
+        </div>
+        <div class="contenido" id="divGestionProfesores">
+          
+            <div class="inferior">
+                <div class="titulo">MOVIMIENTOS</div>
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">NUMERO DE CUENTA</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="txtNumeroCuenta3"/>
+                    </div>
+                </div>
+                <div class="contenedorAcciones">
+                    <input type="button" value="BUSCAR" onclick="ejecutar();"/>                    
+                </div>
+                <div id="tablaMovimientos">
+                    TABLA
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
