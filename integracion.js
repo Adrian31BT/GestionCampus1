@@ -9,6 +9,31 @@ mostrarPaginaMaterias=function(){
     ocultarComponente("divGestionProfesores")
 
 }
+mostrarPaginaProfesores=function(){
+    mostrarComponente("divGestionProfesores");
+    ocultarComponente("divMaterias");
+    ocultarComponente("divGestionAulas");
+    ocultarComponente("divGestionEstudiante")
+
+}
+
+mostrarPaginaAulas=function(){
+    mostrarComponente("divGestionAulas");
+    ocultarComponente("divMaterias");
+    ocultarComponente("divGestionEstudiante");
+    ocultarComponente("divGestionProfesores")
+
+}
+
+mostrarPaginaEstudiantes=function(){
+    mostrarComponente("divGestionEstudiante");
+    ocultarComponente("divMaterias");
+    ocultarComponente("divGestionAulas");
+    ocultarComponente("divGestionProfesores")
+
+
+
+}
 
 crearMateria=function(
 ){
