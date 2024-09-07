@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="estilos.css" rel="stylesheet" />
+    <script src="integracion.js"></script>
+    <script src="utilitarios.js"></script>
+
+</head>
+
+<body onload="mostrarPaginaMaterias(), refrescarMaterias();">
+    <div class="principal">
+        <div class="menu">
+            <div class="contenedorLogo">
+                <img src="./imagenes/logoKrakeDev.png" width="80%" />
+            </div>
+            <div class="contenedorBotones">
+                <input type="button" value="MATERIAS" class="boton"  onclick="mostrarPaginaMaterias();"/>
+                <input type="button" value="PROFESORES" class="boton" onclick="mostrarPaginaProfesores();" />
+                <input type="button" value="ALUMNOS" class="boton" onclick="mostrarPaginaEstudiantes();"/>
+                <input type="button" value="AULAS" class="boton" onclick="mostrarPaginaAulas();"/>
+            </div>
+            <div class="contenedorInfoGrupo">
+                <div>INTEGRANTE 3</div>
+                <div>INTEGRANTE 2</div>
+                <div>INTEGRANTE 1</div>
+            </div>
+        </div>
+        <div class="contenido" id="divMaterias">
+            <div class="superior">
+                <div class="titulo">MATERIAS</div>
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">NOMBRE DE MATERIA</div>
+                    <div class="cajaTexto" >
+                        <input type="text" class="caja" id="txtNombreMaterias"/>
+                    </div>
+                </div>
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">CODIGO</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="txtCodigo"/>
+                    </div>
+                </div>
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">DESCRIPCION</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="txtDescripcion"/>
+                    </div>
+                </div>
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">BUSCAR</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="txtDescripcion"/>
+                    </div>
+                </div>
+                <div class="contenedorAcciones">
+                    <input type="button" value="GUARDAR" onclick="agregarMateria();"/>
+                    <input type="button" value="REFRESCAR" onclick="refrescarMaterias()"/>
+                    <input type="button" value="BUSCAR" onclick="buscarMateria()"/>
+
+                </div>
+            </div>
+
+            <div class="inferior" id="tblMaterias">
+                TABLA
+            </div>
+
+        </div>
+        <div class="contenido" id="divGestionEstudiante">
+            <div class="superior"></div>
+                <div class="titulo">ESTUDIANTES</div>
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">ID</div>
+                    <div class="cajaTexto" >
+                        <input type="text" class="caja" id="txtIdEstudiante"/>
+                    </div>
+                </div>
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">NOMBRE</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="txtNombre"/>
+                    </div>
+                </div>
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">CURSO</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="txtCurso"/>
+                    </div>
+                </div>
+                <div class="contenedorTexto">
+                    <div class="etiquetaTexto">MATRICULA</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="txtMatricula"/>
+                    </div>
+                </div>
+                <div class="contenedorTexto"></div>
+                    <div class="etiquetaTexto">BUSCAR ID ESTUDIANTE</div>
+                    <div class="cajaTexto">
+                        <input type="text" class="caja" id="txtBuscar"/>
+                    </div>
+                </div>
+                <div class="contenedorAcciones">
+                    <input type="button" value="GUARDAR" onclick="agregarEstudiante()"/>
+                    <input type="button" value="REFRESCAR" onclick="refrescarEstudiante()"/>
+                    <input type="button" value="BUSCAR" onclick="buscarEstudante();"/>
+                    <input type="button" value="ELIMINAR" onclick="eliminarEstudante();"/>
+                </div>
+            </div>
+
+            <div class="inferior" id="tablaEstudiantes">
+                TABLA
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
