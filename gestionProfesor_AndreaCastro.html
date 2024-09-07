@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="gestionProfesor_AndreaCastro.js"></script>
+        <script src="utilitarios.js"></script>
+        <link href="gestionProfesor_AndreaCastro.css" rel="stylesheet"/>
+    </head>
+    
+        <div class="principal">
+            <div class="contenedor">
+                <div class="imagen">
+                    <img src="logoKrakeDev.png" class="imagen" width="50%"/>
+                </div>
+                <div class="cajas">
+                    <h2>Nombre </h2>
+                    <input type="text" id="txtNombre"/></div>
+                </div>
+                <div class="cajas">
+                    <h2>Edad</h2>
+                    <input type="text" id="txtEdad"/>
+                </div>
+                <div class="cajas">
+                    <h2>gmail</h2>
+                    <input type="text" id="txtEmail">
+                </div>
+                <div class="cajas">
+                    <h3>Identidicador</h3>
+                    <input type="text" id="txtBuscar">
+                <div >
+                    <input type="button" value="Buscar" onclick="ejecutarProfesor();" class="botones">
+                    <input type="button" value="Guardar" onclick="agregarProfesor();" class="botones">
+                    <input type="button" value="Refrescar" onclick="refrescarProfesor();" class="botones">
+                </div>
+                
+                <div id="lblTabla" class="Tabla">
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
