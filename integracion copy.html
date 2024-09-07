@@ -15,10 +15,9 @@
                 <img src="./imagenes/logoKrakeDev.png" width="80%" />
             </div>
             <div class="contenedorBotones">
-                <input type="button" value="MATERIAS" class="boton"  onclick="mostrarPaginaMaterias();"/>
-                <input type="button" value="PROFESORES" class="boton" onclick="mostrarPaginaProfesores();" />
-                <input type="button" value="ALUMNOS" class="boton" onclick="mostrarPaginaAulas();"/>
-                <input type="button" value="AULAS" class="boton" onclick="mostrarPaginaEstudiantes();"/>
+                <input type="button" value="CUENTAS" class="boton"  onclick="cargarPaginaCuentas();"/>
+                <input type="button" value="TRANSACCIONES" class="boton" onclick="cargarPaginaTRansacciones();" />
+                <input type="button" value="MOVIMIENTOS" class="boton" onclick="cargarPaginaMoviemientos();"/>
             </div>
             <div class="contenedorInfoGrupo">
                 <div>INTEGRANTE 3</div>
@@ -47,17 +46,10 @@
                         <input type="text" class="caja" id="txtDescripcion"/>
                     </div>
                 </div>
-                <div class="contenedorTexto">
-                    <div class="etiquetaTexto">BUSCAR</div>
-                    <div class="cajaTexto">
-                        <input type="text" class="caja" id="txtDescripcion"/>
-                    </div>
-                </div>
                 <div class="contenedorAcciones">
                     <input type="button" value="GUARDAR" onclick="agregarMateria();"/>
                     <input type="button" value="REFRESCAR" onclick="refrescarMaterias()"/>
                     <input type="button" value="BUSCAR" onclick="buscarMateria()"/>
-
                 </div>
             </div>
 
@@ -121,18 +113,12 @@
         <div class="contenido" id="divGestionProfesores">
           
             <div class="inferior">
-                <div class="titulo">PROFESORES</div>
+                <div class="titulo">MOVIMIENTOS</div>
                 <div class="contenedorTexto">
-                    <div class="etiquetaTexto">NOMBRE PROFESOR</div>
+                    <div class="etiquetaTexto">NUMERO DE CUENTA</div>
                     <div class="cajaTexto">
                         <input type="text" class="caja" id="txtNumeroCuenta3"/>
-                </div>
-                <div class="contenedorTexto">
-                    <div class="etiquetaTexto">EDAD</div>
-                    <div class="cajaTexto">
-                        <input type="text" class="caja" id="txtNumeroCuenta3"/>
-                </div>
-                    
+                    </div>
                 </div>
                 <div class="contenedorAcciones">
                     <input type="button" value="BUSCAR" onclick="ejecutar();"/>                    
