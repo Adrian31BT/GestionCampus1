@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="gestionMaterias1.js"></script>
+    <script src="utilitarios.js"></script>
+    <link href="gestionAulas_[Nombre_Alumno].CSS" rel="stylesheet"/>
+</head>
+<body onload=" mostrarTabla()">
+    <h1>NUMERO DE AULAS</h1>
+    <input type="text" id="txtNumeroAulas" placeholder="MATERIA">
+    <div id="lblaula"></div>
+
+ <h1>horario</h1>
+    <input type="text" id="txtHorario" placeholder="HORARIO">
+    <div id="lblhorario"></div>
+<h1>Capacidad</h1>
+    <input type="text" id="txtCapacidadMáxima" placeholder="CAPACIDAD">
+    <div id="lblcapacidad"></div>
+
+
+    <input type="button"    class=".estiloBoton"  onclick="crearAula()"   value="agregar ">
+    <input type="button"    class=""    value="BUSCAR AULA" onclick="determinarAula()">
+    <div id="tabla"></div>
+
+
+    <img src="gameOver.gif" width="10%" />
+    <img src="krakeLogo.png" class="imgLogo" width="10%" />
+</body>
+</html>
