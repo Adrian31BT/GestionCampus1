@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="gestionMaterias_[Nombre_Alumno].js"></script>
+        <script src="utilitarios.js"></script>
+        <link rel="stylesheet" href="materias.css"  />
+
+
+    </head>
+    <body onload="refrescarMaterias()">
+        <div class="principal">
+                <div class="logoEscuela">
+                    <img src="./imagenes/logoKrakeDev.png" width="80%" />
+                </div>
+            <div class="contenido">
+                <div class="titulo">
+                    MATERIAS
+                    </div>
+                    <div class="ingresoDatos">
+
+                        <div class="contenido">
+                        <h3>NOMBRE DE LA MATERIA</h3>
+                        <input type="text" class="cajaTexto"  id="txtNombreMateria"/>
+                        <h3>CODIGO</h3>
+                        <input type="text" class="cajaTexto"  id="txtCodigo"/>
+                        <h3>DESCRIPCIÓN</h3>
+                        <input type="text" class="cajaTexto"  id="txtDescripcion"/>
+                    </div>
+                    </div>
+
+                            <button onclick="agregarMateria()">
+                                <div class="button">
+                                    GUARDAR
+                                </div>
+                            </button>
+                            <button onclick="refrescarMaterias()">
+                                <div class="button">
+                                    REFRESCAR
+                                </div>
+                            </button>
+                            <button onclick="buscarMateria()">
+                                <div class="button">
+                                    BUSCAR
+                                </div>
+                                
+                            </button>
+
+                            <div class="tabla">
+                                <table id="tblMaterias" >
+
+                                </table>
+                                
+                            </div>
+                        </div>
+                        
+                </div>
+
+                
+
+
+                </div>
+
+        </div>
+        
+        
+    </body> 
+</html>
